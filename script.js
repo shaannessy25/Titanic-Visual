@@ -103,7 +103,7 @@ function sortGender(){
 
 function sortPClass(){
   data.sort((a, b) => {
-   return  b.fields.pclass - a.fields.pclass
+   return  a.fields.pclass - b.fields.pclass
   })
 }
 
@@ -164,6 +164,7 @@ document.body.addEventListener('mouseover', (e) => {
    <ul>
     <li>Age: ${fields.age}</li>
     <li>Fare: ${fields.fare}</li>
+    <li>pclass: ${fields.pclass}</li>
    </ul>
    `
   }

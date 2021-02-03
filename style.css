@@ -1,1 +1,123 @@
 
+.legend {
+    border: 1px solid black;
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+.legend > h3 {
+    text-align: center;
+}
+
+.legend > ul {
+    list-style-type: none;
+    font-size: 12pt;
+}
+
+.legend > ul > li {
+    margin: 5px;
+}
+
+.button-class{
+    margin: 10px 0px;
+
+}
+
+
+.sort-by-age {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #A0AF84;
+    background-color: #008fc1;
+    color: #FDFFFC;
+    border-radius: 25px;
+    text-align: center;
+    transition: 200ms;
+}
+
+.sort-by-age:focus {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #008fc1;
+    color: #008fc1;
+  }
+
+
+.sort-by-fare {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #A0AF84;
+    background-color: #008fc1;
+    color: #FDFFFC;
+    border-radius: 25px;
+    text-align: center;
+    transition: 200ms;
+}
+
+.sort-by-fare:focus {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #008fc1;
+    color: #008fc1;
+  }
+
+.sort-by-embarked {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #A0AF84;
+    background-color: #008fc1;
+    color: #FDFFFC;
+    border-radius: 25px;
+    text-align: center;
+    transition: 200ms;
+}
+
+.sort-by-embarked:focus {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #008fc1;
+    color: #008fc1;
+  }
+
+
+.sort-by-gender {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #A0AF84;
+    background-color: #008fc1;
+    color: #FDFFFC;
+    border-radius: 25px;
+    text-align: center;
+    transition: 200ms;
+}
+
+.sort-by-gender:focus {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #008fc1;
+    color: #008fc1;
+  }
+
+
+.sort-by-pclass {
+    padding: 5px;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #A0AF84;
+    background-color: #008fc1;
+    color: #FDFFFC;
+    border-radius: 25px;
+    text-align: center;
+    transition: 500ms;
+}
+
+.sort-by-pclass:focus {
+    outline: none;
+    background-color: transparent;
+    border: 3px solid #008fc1;
+    color: #008fc1;
+  }
