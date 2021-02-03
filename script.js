@@ -92,13 +92,22 @@ function sortFare() {
   })
 }
 
+function sortGender(){
+  data.sort((a, b) => {
+    if (a.fields.sex === 'female'){
+      return 1
+    }
+    return -1
+  })
+}
 
-data.sort((a, b) => {
-  if (a.fields.sex === 'female'){
-    return 1
-  }
-  return 1
-})
+function sortPClass(){
+  data.sort((a, b) => {
+   return  b.fields.pclass - a.fields.pclass
+  })
+}
+
+
 
 // Loop over each passenger and append them to the titanic
 passengers.forEach(p => {
@@ -114,8 +123,18 @@ function renderPassengers() {
     p.dataset.id = i
     p.style.width = '15px'
     p.style.height = '15px'
+    p.style.boxSizing = 'border-box'
     p.style.borderRadius = data[i].fields.sex === 'female' ? '50%' : '0%'
     p.style.opacity = data[i].fields.survived === 'Yes' ? '1' : '0.5'
+    if (data[i].fields.pclass === 1) {
+      p.style.border = 'solid 3px blue'
+    } else if ( data[i].fields.pclass === 2){
+      p.style.border = 'solid 3px red'
+    } else if ( data[i].fields.pclass === 3){
+      p.style.border = 'solid 3px green'
+    } else {
+      p.style.border = 'solid 3px black'
+    }
     p.style.backgroundColor = portColor[data[i].fields.embarked]
   })
 }
@@ -160,7 +179,6 @@ document.body.addEventListener('mouseout', (e) => {
 
 
 
-
 document.body.addEventListener('click', (e) => {
   if(e.target.matches('.sort-by-age')){
     sortAge()
@@ -170,6 +188,12 @@ document.body.addEventListener('click', (e) => {
     renderPassengers()
   } else if (e.target.matches('.sort-by-embarked')){
     sortEmbarked()
+    renderPassengers()
+  } else if (e.target.matches('.sort-by-gender')){
+    sortGender()
+    renderPassengers()
+  } else if (e.target.matches('.sort-by-pclass')){
+    sortPClass()
     renderPassengers()
   }
 })
